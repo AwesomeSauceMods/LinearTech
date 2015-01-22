@@ -7,6 +7,7 @@ import net.minecraftforge.common.util.ForgeDirection
 
 
 class TileEntityEnergyIn(cap: Int) extends TileEntity with TBasicComponent with IEnergyReceiver {
+  def this() = this(1000)
   override def getEnergyStored(side: ForgeDirection) = 0
   override def getMaxEnergyStored(side: ForgeDirection) = {
     val opp = side.getOpposite
