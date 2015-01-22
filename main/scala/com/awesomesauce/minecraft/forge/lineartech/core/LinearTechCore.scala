@@ -15,6 +15,8 @@ object LinearTechCore extends LTModule {
   var energyIn: Block = null
   var energyOut: Block = null
   def preInit() = {
+    itemIn = ItemUtil.makeBlock(lt, "itemIn", Material.iron, () => new TileEntityItemIn)
+    itemOut = ItemUtil.makeBlock(lt, "itemOut", Material.iron, () => new TileEntityItemOut)
     energyIn = ItemUtil.makeBlock(lt, "energyIn", Material.iron, () => new TileEntityEnergyIn(1000))
     energyOut = ItemUtil.makeBlock(lt, "energyOut", Material.iron, () => new TileEntityEnergyOut)
   }
